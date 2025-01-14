@@ -1,0 +1,29 @@
+Integrasi Pi Wallet, yang mendukung transaksi berbasis Pi Coin dan otentikasi aman menggunakan API Pi Network.
+
+
+---
+
+Struktur Proyek
+
+pi-wallet-integration/
+├── backend/
+│   ├── src/
+│   │   ├── auth/
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── auth.service.ts
+│   │   │   └── auth.module.ts
+│   │   ├── wallet/
+│   │   │   ├── wallet.controller.ts
+│   │   │   ├── wallet.service.ts
+│   │   │   └── wallet.module.ts
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── LoginButton.jsx
+│   │   │   └── Wallet.jsx
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   └── piAuth.js
+
+
+---
