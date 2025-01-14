@@ -1,0 +1,28 @@
+1. Analisis aset digital secara real-time.
+
+
+2. Staking otomatis dan rebalancing portofolio.
+
+
+3. Laporan risiko dan rekomendasi investasi.
+
+
+
+Kode ini mencakup bagian backend (NestJS), AI Engine (Python), dan frontend (ReactJS).
+
+
+---
+
+Backend: NestJS (API untuk Portofolio Otomatis)
+
+Struktur Backend:
+
+backend/
+├── src/
+│   ├── portfolio/
+│   │   ├── portfolio.controller.ts
+│   │   ├── portfolio.service.ts
+│   │   ├── portfolio.module.ts
+│   │   └── dto/
+│   │       └── update-portfolio.dto.ts
+├── main.ts
