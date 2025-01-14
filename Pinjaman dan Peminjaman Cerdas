@@ -1,0 +1,31 @@
+1. Protokol pinjaman dengan suku bunga dinamis berbasis data pasar.
+
+
+2. Mekanisme pencocokan peminjam dan pemberi pinjaman.
+
+
+3. Keamanan melalui kontrak pintar berbasis Pi Network.
+
+
+
+
+---
+
+Backend: NestJS untuk Pinjaman
+
+Struktur Backend:
+
+backend/
+├── src/
+│   ├── lending/
+│   │   ├── lending.controller.ts
+│   │   ├── lending.service.ts
+│   │   ├── lending.module.ts
+│   │   └── dto/
+│   │       ├── create-loan.dto.ts
+│   │       ├── match-loan.dto.ts
+│   │       └── repay-loan.dto.ts
+├── main.ts
+
+
+---
