@@ -1,0 +1,50 @@
+LoanContract.sol
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract LoanContract {
+    struct Loan {
+        address borrower;
+        address lender;
+        uint256 amount;
+        uint256 interestRate;
+        uint256 duration;
+        bool isRepaid;
+    }
+
+    Loan[] public loans;
+
+    function createLoan(
+        address _borrower,
+        uint256 _amount,
+        uint256 _interestRate,
+        uint256 _duration
+    ) public {
+        loans.push(
+            Loan({
+                borrower: _borrower,
+                lender: address(0),
+                amount: _amount,
+                interestRate: _interestRate,
+                duration: _duration,
+                isRepaid: false
+            })
+        );
+    }
+
+    function matchLoan(uint256 _loanId, address _lender) public {
+        Loan storage loan = loans[_loanId];
+        require(loan.lender == address(0), "Loan already matched");
+        loan.lender = _lender;
+    }
+
+    function repayLoan(uint256 _loanId) public {
+        Loan storage loan = loans[_loanId];
+        require(msg.sender == loan.borrower, "Only borrower can repay");
+        loan.isRepaid = true;
+    }
+}
+
+
+---
